@@ -1,0 +1,20 @@
+#ProjectName: Netsim Install Page
+#Author     : Billy Dunne (author of this README)
+#Team       : SimNet
+#Website    : ---
+#GitRepo    : git clone ssh://ebildun@gerrit.ericsson.se:29418/OSS/com.ericsson.ci.simnet/simdep
+
+#[[ FOLDER STRUCTURE ]]
+#/ [root]
+#	/export/	holding files referenced by PHP application in /var
+#	/home/		holding files used in project that are stored in developers home directory on the server (referenced by PHP application in /var)
+#	/mounts/	holding files that are stored on other servers (referenced by PHP application in /var)
+#	/var/		holding files used by PHP application
+#	/databases/	holding the sql files for creating the database structure ONLY for databases used in this project (i.e. NO DATA) 
+#	
+#[[ NOTES ]]
+#
+# === This repository is for Netsim Install Page PHP application files.
+# === It attempts to capture all files referenced by the application, and mimic (NOT mirror) the directory structure as close as possible.
+# === Some of the files referenced by the application are stored on other servers.
+# === The files in the database directory are for re-creating the databases used in the PHP application (STRUCTURE only, NO DATA).

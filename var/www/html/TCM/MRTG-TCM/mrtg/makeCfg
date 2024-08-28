@@ -1,0 +1,27 @@
+#!/bin/sh
+
+NETSIM_LIST=`mysql -s -s -e "use mrtg;select Name from netsimlin"`
+OUTPUT_CFG=$1
+
+TEMPLATE_DIR=`dirname $0`
+cat ${TEMPLATE_DIR}/header.cfg > $OUTPUT_CFG
+
+for HOST in ${NETSIM_LIST} ; do 
+	ip=`nslookup $HOST | grep "Address: " | awk '{print $2}'`
+
+	## Get cpu count from database, if not present try machine, if not possible, default to 1 cpu
+
+	cpu_count=`mysql -s -s -e "use suse_netsimlin;select cpu_num from suse_netsimlin where hostname='$HOST'"`
+	if [[ $cpu_count == "" ]]
+	then
+		#echo "ERROR: No cpu count found for $HOST in suse_netsimlin database, getting from machine"
+
+		cpu_count=`/home/ejershe/TCM-WebPage/MRTG-TCM/mrtg/mrtg-v2/get_num_cpus.sh $HOST`
+		if [[ $cpu_count == "0" ]]
+        	then
+			echo "ERROR: Unable to get cpu count for $HOST from database or itself, defaulting to 1 cpu."
+			cpu_count=1
+		fi
+	fi
+	cat ${TEMPLATE_DIR}/host.cfg | sed "s/hostname/${HOST}/g" | sed "s/ip_address/${ip}/g" | sed "s/cpucount/${cpu_count}/g" >> $OUTPUT_CFG
+done

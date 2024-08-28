@@ -1,0 +1,6 @@
+#[[ NOTES ]]
+#
+# === This directory stores the scripts to recreate the databases used by the Netsim Install Page PHP application.
+# === The following example command was used to create the SQL files:
+# === mysqldump --no-data db_name > db_name.sql
+#

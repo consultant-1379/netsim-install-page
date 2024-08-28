@@ -1,0 +1,3 @@
+# Relevant information to netsim install page scripts
+# The file /home/eeijkee/dev/bin/netsim_fixes.sh makes a call for a file located at ftp.athtem.ericsson.se/pub/netsim/rsh/rsh.tar
+# This file does not appear to exist and cannot connect to the ftp server using the given credentials

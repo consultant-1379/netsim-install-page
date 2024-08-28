@@ -1,0 +1,44 @@
+EXPECT=expect
+mkdir -p /mounts/ranosdns2/;mount 159.107.173.12:/jumpstart/scripts/ /mounts/ranosdns2/ 2>/dev/null
+SUN_ARCH=`uname -p`
+if [[ "$SUN_ARCH" == "sparc" ]]
+then
+	SOL_REL=`uname -r`
+        case $SOL_REL in
+        5.10)
+                EXPECT_DIR=/mounts/ranosdns2/expect/${SUN_ARCH}/10
+                LDAPSEARCH=/mounts/ranosdns2/ldapsearch/${SUN_ARCH}/10/bin/ldapsearch
+                ;;
+        5.9)
+                EXPECT_DIR=/mounts/ranosdns2/expect/${SUN_ARCH}/9
+                LDAPSEARCH=/mounts/ranosdns2/ldapsearch/${SUN_ARCH}/9/bin/ldapsearch
+                ;;
+        5.8)
+                EXPECT_DIR=/mounts/ranosdns2/expect/${SUN_ARCH}/9
+                LDAPSEARCH=/mounts/ranosdns2/ldapsearch/${SUN_ARCH}/9/bin/ldapsearch
+                LD_LIBRARY_PATH=/mounts/ranosdns2/ldapsearch/${SUN_ARCH}/9/lib:$LD_LIBRARY_PATH
+                ;;
+        *)
+		echo "$SOL_REL"
+                echo "Unsupported Sparc Solaris release"
+                exit 1
+                ;;
+        esac
+elif [[ "$SUN_ARCH" == "i386" ]]
+then
+        EXPECT_DIR=/mounts/ranosdns2/expect/${SUN_ARCH}
+        LDAPSEARCH=/mounts/ranosdns2/ldapsearch/${SUN_ARCH}/10/bin/ldapsearch
+else
+	 EXPECT_DIR=/usr/
+ #       echo "Unsupported Solaris Platform"
+  #      exit 1
+fi
+EXPECT=${EXPECT_DIR}/bin/expect
+
+if [ ! -x ${EXPECT} -o ! -s ${EXPECT} ]; then
+    $ECHO "$expect binary not located or not executable"
+    exit 1
+fi
+
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${EXPECT_DIR}/lib
+export LD_LIBRARY_PATH

@@ -1,0 +1,13 @@
+#!/usr/bin/expect
+# Created by Mark Kennedy, June 2008
+# This script attempts to automate entering login details during an rsh
+# Usage is rsh_login.exp hostname password
+# If log in is successful, the shell prompt will display, # which can be checked for in this scripts output
+
+set timeout 2
+spawn rsh [lindex $argv 0]
+set password [lindex $argv 1]
+expect "Password:"
+send $password\r
+expect "#"
+expect eof

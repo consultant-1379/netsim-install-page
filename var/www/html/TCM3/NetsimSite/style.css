@@ -1,0 +1,761 @@
+body {
+  color: black; background: white;
+font-size:16;
+}
+#sign_out {
+	position:absolute;
+	top:10;
+	left:1070;
+}
+#status {
+	position:absolute;
+	top:150;
+	left:10;
+	height:200px;
+	width:480px;
+	overflow:auto;
+	border-width: 2px;
+	border-color: white;
+	border-style: solid;
+	background:black;
+	color:white;
+}
+#machinediv {
+	position:absolute;
+        top:0;
+        left:20;
+        width:500;
+        height:390;
+}
+#innermachinediv{
+	position:absolute;
+	top:60;
+	left:10;
+	width:480;
+	border-width: 2px;
+        border-color: black;
+	border-top-style:solid;
+}
+#machinelist {
+	position:absolute;
+	top:20;
+	left:10;
+	height:290;
+	width:210;
+}
+#machinelistto {
+        position:absolute;
+        top:20;
+        right:10;
+        height:290;
+	width:210;
+}
+#moverightbtn{
+	position:absolute;
+	left:225;
+	width:30;
+	height:30;
+	top:110;
+}
+#moveleftbtn{
+        position:absolute;
+        left:225;
+        width:30;
+        height:30;
+	top:140;
+}
+
+#add {
+	position:absolute;
+	top:10;
+	left:20;
+	width:200;
+	height:25;
+
+}
+#patchlist {
+	position:absolute;
+        left:560;
+        width:500;
+        top:20;
+	height:370;
+	visibility:hidden;
+}
+a.deselected:link, a.deselected:visited {
+	color: #002577;
+}
+a.deselected:hover, a.deselected:active {
+	color: #FF7200;
+}
+
+a.selected{
+	text-decoration: none;
+	color:black;
+}
+
+#install_netsim_div
+{
+	position:absolute;
+        left:560;
+        width:500;
+        top:20;
+        height:370;
+}
+
+#viewer {
+	position:absolute;
+	top:410;
+        left:560;
+        width:500;
+        height:360;
+}
+#loglist {
+	position:absolute;
+	top:50;
+	left:10;
+	height:100;
+	width:480;
+}
+#queue {
+	position:absolute;
+	left:20;
+	top:50;
+	width:460;
+	height:260;
+}
+#queuediv {
+	position:absolute;
+	left:20;
+	top:410;
+	width:500;
+	height:360;
+}
+#queueinstall {
+	position:absolute;
+	right:20;
+	bottom:10;
+	width:100;
+	height:25;
+}
+#removequeueitems {
+	position:absolute;
+	left:20;
+	bottom:10;
+	width:100;
+	height:25;
+}
+#stopqueueinstall {
+	position:absolute;
+        right:130;
+	bottom:10;
+        width:100;
+	height:25;
+}
+#wait {
+	position:absolute;
+	left:-495;
+	top:397;
+	z-index:100;
+}
+.title {
+
+	border-width: 2px;
+        border-color: black;
+	background: #8fc1db;
+	text-align:center;
+	height:20;
+	font-size:1.2em;
+	color:black;
+}
+.error {
+	color:red;
+}
+#haltdiv
+{
+	position:absolute;
+	left:120;
+	bottom:10;
+}
+.outer {
+	background:#8fc1db;
+	border-width: 2px;
+        border-color: black;
+        border-style: solid;
+}
+.innerpatchlist {
+	position:absolute;
+	left:10;
+	width:480;
+	border-width:2px;
+	border-color:black;
+	border-top-style:solid;
+	height:100;
+}
+#a0 {
+	top:40;
+}
+#a1 {
+	top:150;
+}
+#a2 {
+	top:260;
+}
+.machinepatch {
+	position:absolute;
+	top:20;
+	height:80;
+	width:200;
+}
+
+.patchlistpatch {
+	position:absolute;
+	left:210;
+	height:60;
+	width:260;
+	top:40;
+}
+.addtoqueue {
+	position:absolute;
+	right:5;
+	width:60;
+	top:20;
+	height:41;
+	background:green;
+        border:0;
+        color:white;
+}
+select {
+	position:absolute;
+	width:230;
+}
+.netsimversion{
+	font-size:1.2em;
+	position:absolute;
+	left:210;
+	top:10;
+}
+a {
+	color:red;
+}
+#netsim_version {
+	position:absolute;
+	left:120;
+	top:130;
+	width:220;
+}
+#setup_ssh {
+        position:absolute;
+        left:120;
+        top:160;
+}
+
+#netsim_testing_type {
+	position:absolute;
+	left:120;
+	top:100;
+	width:220;
+}
+#netsim_userid {
+	position:absolute;
+	left:120;
+	top:10;
+	width:220;
+}
+#netsim_email {
+	position:absolute;
+	left:120;
+	top:40;
+	width:220;
+}
+#netsim_project {
+	position:absolute;
+	left:120;
+	top:70;
+	width:220;
+}
+#addtoqueue_netsim
+{
+	position:absolute;
+	right:10;
+	top:10;
+	height:41;
+	width:60;
+}
+#netsim_version_title {
+	position:absolute;
+	left:10;
+	top:130;
+	width:100;
+	text-align:right;
+}
+#setup_ssh_title{
+        position:absolute;
+        left:10;
+        top:160;
+        text-align:right;
+}
+#warning_title{
+        position:absolute;
+        left:10;
+        top:190;
+}
+#netsim_testing_type_title{
+	position:absolute;
+	left:10;
+	top:100;
+	width:100;
+	text-align:right;
+}
+#netsim_userid_title{
+	position:absolute;
+	left:10;
+	top:10;
+	width:100;
+	text-align:right;	
+}
+#netsim_email_title {
+	position:absolute;
+	left:10;
+	top:40;
+	width:100;
+	text-align:right;
+}
+#netsim_project_title {
+        position:absolute;
+        left:10;
+        top:70;
+        width:100;
+        text-align:right;
+}
+#inner_netsim_install{
+	position:absolute;
+	left:10;
+	top:40;
+	width:480;
+	height:200;
+	border-top-style:solid;
+	border-width:2;
+}
+
+#special_functions_title
+{
+	position:absolute;
+	top:0;
+	width:500;
+}
+#special_functions_machines
+{
+	position:absolute;
+	top:30;
+	left:10;
+	width:480;
+	height:100;
+}
+.functiondiv {
+	position:absolute;
+	left:-1500;
+	top:800;
+	width:500;
+	background:#8fc1db;
+	border-style: solid;
+        border-color:black;
+        border-width: 2px;
+}
+.functiondiv input, .functiondiv select
+{
+        position:absolute;
+        left:120;
+        width:220;
+}
+.functiondiv .help
+{
+	position:absolute;
+	left:5;
+	top:5;
+	width:490;
+	text-align:center;
+}
+.functiondiv button
+{
+	position:absolute;
+	right:10;
+	top:50;
+	width:120;
+}
+#reinstall_function
+{
+	height:100;
+}
+#update_license
+{
+	height:100;
+}
+#setup_rsh_div
+{
+	height:100;
+}
+#add_to_mrtgdiv
+{
+	height:100;
+}
+#install_cvs_div
+{
+	height:100;
+}
+#add_server{
+	height:100;
+}
+#perform_backup_div
+{
+        height:250;
+}
+#request_backup_div
+{
+	height:150;
+}
+#backup_login_div
+{
+	height:100;
+}
+#restore_backup_div
+{
+        height:150;
+}
+#reinstall_netsim_version,#update_license_version
+{
+	position:absolute;
+	left:120;
+	width:220;
+	top:50;
+
+}
+#reinstall_netsim_machinelist, #reinstall_netsim_machinelist_title
+{
+	top:80;
+}
+#select_function, #select_function_title
+{
+	top:50;
+}
+#remove_netsim_db,#update_license_button
+{
+	position:absolute;
+	top:50;
+	width:120;
+	right:10;
+}
+#root_password, #root_password_title
+{
+	top:50;
+}
+button
+{
+	position:absolute;
+}
+#server_to_add, #add_server_title{
+	top:50;
+}
+#reinstall_netsim_version_title,#update_license_title
+{
+	position:absolute;
+        width:100;
+        left:10;
+        top:50;
+        text-align:right;
+}
+#patchtitle{
+	font-size:1.2em;
+	position:absolute;
+	left:820;
+	width:235;
+	top:0;
+	height:20;
+}
+#netsim_title{
+	font-size:1.2em;
+        position:absolute;
+        left:570;
+        width:235;
+        top:0;
+	height:20;
+}
+.selected{
+	 text-align:center;
+        background:#8fc1db;
+        border-style: solid;
+        border-bottom-style:none;
+	border-color:black;
+	border-width: 2px;
+}
+.deselected{
+	 text-align:center;
+        background:silver;
+        border-style: solid;
+	border-color:black;
+	border-width: 2px;
+}
+
+#specialfunctionsdiv {
+	position:absolute;
+	left:20;
+	top:800;
+	width:500;
+	height:150;
+}
+#patchhelp{
+	position:absolute;
+	left:5;
+	top:5;
+	width:490;
+	text-align:center;
+}
+#netsimhelp{
+        position:absolute;
+        left:5;
+        top:5;
+        width:490;
+        text-align:center;
+}
+#machinehelp{
+        position:absolute;
+        left:5;
+        top:25;
+        width:490;
+        text-align:center;
+}
+#queuehelp{
+        position:absolute;
+        left:5;
+        top:25;
+        width:490;
+        text-align:center;
+}
+#viewerhelp{
+        position:absolute;
+        left:5;
+        top:25;
+        width:490;
+        text-align:center;
+}
+.help
+{
+	color:#990033;
+        font-size:1.1em;
+}
+#machine_list_title{
+	position:absolute;
+	left:10;
+}
+#selected_machine_title{
+	position:absolute;
+	left:260;
+}
+#specialhelp{
+        position:absolute;
+        left:5;
+        top:25;
+        width:490;
+        text-align:center;
+}
+a.button, a.buttonDis {
+position:absolute;
+background-color: transparent;
+background-image: url(Include/button.gif);
+background-repeat: no-repeat;
+width: 132px;
+height: 28px;
+margin: 5px auto;
+padding: 5px 0 0 0;
+text-align: center;
+font-family: Helvetica, Calibri, Arial, sans-serif;
+font-size: 100%;
+font-weight: bold;
+text-decoration: none;
+top:5;
+right:0;
+}
+a.button:link, a.button:visited {
+background-position: 0 -0px;
+color: #002577;
+}
+a.button:hover, a.button:active {
+color: #FF7200;
+}
+a.buttonDis:link, a.buttonDis:visited, a.buttonDis:hover, a.buttonDis:active {
+background-position: 0 -0px;
+color: #5F5F5F;
+cursor: default;
+}
+.icon {
+background-repeat: no-repeat;
+padding: 0 0 5px 18px; }
+a.button:hover .icon, a.button:active .icon {
+background-position: 0 -28px;
+}
+a.buttonDis:link .icon, a.buttonDis:visited .icon, a.buttonDis:hover .icon, a.buttonDis:active .icon {
+background-position: 0 -56px;
+}
+#buttonOK .icon {
+background-position: 0 -56px;
+background-image: url(Include/ok.gif);
+}
+
+#login_userid_title
+{
+	position:absolute;
+	left:10;
+	top:40;
+	width:80;
+	
+}
+#login_button{
+	position:absolute;
+	left:265;
+	top:37;
+}
+a img {
+	border: 0px none;
+}
+
+#useridlogin {
+	position:absolute;
+	left:90;
+	width:170;
+	top:40;
+}
+#login_text{
+	position:absolute;
+	left:10;
+	top:10;
+	font-weight: bold;
+}
+#login {
+	position:absolute;
+	border-width: 2px;
+        border-color: black;
+        border-style: solid;
+        background:#8fc1db;
+	width:300;
+	height:100;
+	top:40%;
+	left:40%;
+}
+#login_error{
+	position:absolute;
+	left:10;
+	top:70;
+	font-weight:bold;
+}
+#arrow {
+	position:absolute;
+	left:520;
+	top:150;
+}
+#morefunctions{
+	position:absolute;
+	top:775;
+	left:30;
+	background:orange;
+	color:black;
+	width:150;
+	height:20;
+	text-align:center;
+	border-width: 2px;
+        border-color: black;
+        border-style: solid;
+}
+#request_backup_button
+{
+        position:absolute;
+        top:50;
+        right:10;
+        width:120;
+}
+#addtoqueue_backup_button,#addtoqueue_restore
+{
+	position:absolute;
+        top:50;
+        right:10;
+        width:120;
+}
+#restore_type, #restore_type_title{
+	top:50;
+}
+#restore_simulations, #restore_simulations_title{
+        top:80;
+}
+
+#backup_type, #backup_type_title{
+        top:50;
+}
+#simulations, #simulations_title{
+        top:80;
+}
+#reason_box, #reason_box_title{
+        top:110;
+}
+#backup_login_code, #backup_login_code_title{
+        top:50;
+}
+#backup_login_button
+{
+        right:10;
+        top:40;
+        width:120;
+}
+#needacode{
+	position:absolute;
+        right:10;
+        top:60;
+        width:120;
+}
+#backup_back{
+        position:absolute;
+        left:10;
+        top:20;
+        width:120;
+}
+#specialfunctionsdiv input, #specialfunctionsdiv select
+{
+	position:absolute;
+	left:120;
+	width:220;
+}
+.label{
+	position:absolute;
+	left:10;
+        width:100;
+        text-align:right;
+}
+#backup_machine, #backup_machine_title
+{
+	top:30;
+}
+
+#backup_path, #backup_path_title
+{
+        top:60;
+}
+#backup_reason, #backup_reason_title
+{
+        top:90;
+}
+#backup_project, #backup_project_title
+{
+        top:120;
+}
+#backup_assoc_oss, #backup_assoc_oss_title
+{
+        top:150;
+}
+#backup_assoc_smrs, #backup_assoc_smrs_title
+{
+        top:180;
+}
+#backup_assoc_machines, #backup_assoc_machines_title
+{
+        top:210;
+}
+#msg {display:none; position:absolute; z-index:200; background:url(Include/msg_arrow.gif) left center no-repeat; padding-left:7px}
+#msgcontent {display:block; background:#f3e6e6; border:2px solid #924949; border-left:none; padding:5px; min-width:150px; max-width:250px}
+

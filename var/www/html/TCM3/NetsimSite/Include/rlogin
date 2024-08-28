@@ -1,0 +1,7 @@
+#%PAM-1.0
+session required        pam_limits.so
+auth     required       pam_rhosts_auth.so promiscuous
+auth     required       pam_nologin.so
+account  required       pam_unix2.so
+password required       pam_unix2.so
+session  required       pam_unix2.so    none # debug or trace

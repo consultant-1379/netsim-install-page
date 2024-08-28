@@ -1,0 +1,45 @@
+#viewer {
+        position:absolute;
+        width:500;
+        height:360;
+}
+#loglist {
+        position:absolute;
+        top:50;
+        left:10;
+        height:100;
+        width:480;
+}
+#status {
+        position:absolute;
+        top:150;
+        left:10;
+        height:200px;
+        width:480px;
+        overflow:auto;
+        border-width: 2px;
+        border-color: white;
+        border-style: solid;
+        background:black;
+        color:white;
+}
+#viewer_time{
+	position:absolute;
+	right:5;
+	top:5;
+	width:60;
+}
+#viewerhelp{
+        position:absolute;
+        left:5;
+        top:25;
+        width:490;
+        text-align:center;
+}
+#viewer_title{
+	position:absolute;
+	left:5;
+	top:5;
+	width:490;
+	text-align:center;
+}
